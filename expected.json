@@ -1,0 +1,654 @@
+[
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   30,
+   90,
+   2,
+   10
+  ],
+  "expect": {
+   "juice": 600.0,
+   "syrup": 150.0,
+   "soda": 450.0,
+   "total": 1200.0,
+   "liters": 1.2
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   30,
+   90,
+   2,
+   2
+  ],
+  "expect": {
+   "juice": 120.0,
+   "syrup": 30.0,
+   "soda": 90.0,
+   "total": 240.0,
+   "liters": 0.24
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   150,
+   25,
+   0,
+   4,
+   6
+  ],
+  "expect": {
+   "juice": 225.0,
+   "syrup": 37.5,
+   "soda": 0.0,
+   "total": 262.5,
+   "liters": 0.263
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   100,
+   20,
+   50,
+   1,
+   7
+  ],
+  "expect": {
+   "juice": 700.0,
+   "syrup": 140.0,
+   "soda": 350.0,
+   "total": 1190.0,
+   "liters": 1.19
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   33.3,
+   10.5,
+   22.2,
+   3,
+   5
+  ],
+  "expect": {
+   "juice": 55.5,
+   "syrup": 17.5,
+   "soda": 37.0,
+   "total": 110.0,
+   "liters": 0.11
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   200,
+   40,
+   100,
+   8,
+   1
+  ],
+  "expect": {
+   "juice": 25.0,
+   "syrup": 5.0,
+   "soda": 12.5,
+   "total": 42.5,
+   "liters": 0.043
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   0,
+   60,
+   240,
+   2,
+   12
+  ],
+  "expect": {
+   "juice": 0.0,
+   "syrup": 360.0,
+   "soda": 1440.0,
+   "total": 1800.0,
+   "liters": 1.8
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   500,
+   100,
+   400,
+   10,
+   25
+  ],
+  "expect": {
+   "juice": 1250.0,
+   "syrup": 250.0,
+   "soda": 1000.0,
+   "total": 2500.0,
+   "liters": 2.5
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   75.5,
+   15.5,
+   60.5,
+   2,
+   3
+  ],
+  "expect": {
+   "juice": 113.3,
+   "syrup": 23.3,
+   "soda": 90.8,
+   "total": 227.4,
+   "liters": 0.22699999999999998
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   90,
+   0,
+   0,
+   1,
+   4
+  ],
+  "expect": {
+   "juice": 360.0,
+   "syrup": 0.0,
+   "soda": 0.0,
+   "total": 360.0,
+   "liters": 0.36
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   -10,
+   30,
+   90,
+   2,
+   10
+  ],
+  "expect": {
+   "error": "amounts must not be negative"
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   -5,
+   90,
+   2,
+   10
+  ],
+  "expect": {
+   "error": "amounts must not be negative"
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   0,
+   0,
+   0,
+   2,
+   10
+  ],
+  "expect": {
+   "error": "the recipe is empty"
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   30,
+   90,
+   0,
+   10
+  ],
+  "expect": {
+   "error": "servings must be positive"
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   30,
+   90,
+   2,
+   0
+  ],
+  "expect": {
+   "error": "guests must be positive"
+  }
+ },
+ {
+  "tool": "batch",
+  "args": [
+   120,
+   30,
+   90,
+   2,
+   -4
+  ],
+  "expect": {
+   "error": "guests must be positive"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   120,
+   50
+  ],
+  "expect": {
+   "meltMl": 60.0,
+   "finalMl": 300.0,
+   "pct": 20.0,
+   "band": "classic chill"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   0,
+   50
+  ],
+  "expect": {
+   "meltMl": 0.0,
+   "finalMl": 240.0,
+   "pct": 0.0,
+   "band": "barely softened"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   200,
+   100,
+   30
+  ],
+  "expect": {
+   "meltMl": 30.0,
+   "finalMl": 230.0,
+   "pct": 13.0,
+   "band": "classic chill"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   300,
+   200,
+   80
+  ],
+  "expect": {
+   "meltMl": 160.0,
+   "finalMl": 460.0,
+   "pct": 34.8,
+   "band": "watery - serve colder or use bigger cubes"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   150,
+   50,
+   20
+  ],
+  "expect": {
+   "meltMl": 10.0,
+   "finalMl": 160.0,
+   "pct": 6.3,
+   "band": "barely softened"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   90,
+   100
+  ],
+  "expect": {
+   "meltMl": 90.0,
+   "finalMl": 330.0,
+   "pct": 27.3,
+   "band": "watery - serve colder or use bigger cubes"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   100,
+   25,
+   40
+  ],
+  "expect": {
+   "meltMl": 10.0,
+   "finalMl": 110.0,
+   "pct": 9.1,
+   "band": "barely softened"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   100,
+   28.947,
+   40
+  ],
+  "expect": {
+   "meltMl": 11.6,
+   "finalMl": 111.6,
+   "pct": 10.4,
+   "band": "classic chill"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   350,
+   140,
+   55
+  ],
+  "expect": {
+   "meltMl": 77.0,
+   "finalMl": 427.0,
+   "pct": 18.0,
+   "band": "classic chill"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   180,
+   60,
+   15
+  ],
+  "expect": {
+   "meltMl": 9.0,
+   "finalMl": 189.0,
+   "pct": 4.8,
+   "band": "barely softened"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   0,
+   120,
+   50
+  ],
+  "expect": {
+   "error": "drink must be positive"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   -10,
+   120,
+   50
+  ],
+  "expect": {
+   "error": "drink must be positive"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   -5,
+   50
+  ],
+  "expect": {
+   "error": "ice must not be negative"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   120,
+   -1
+  ],
+  "expect": {
+   "error": "melt must not be negative"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   120,
+   100.1
+  ],
+  "expect": {
+   "error": "melt cannot exceed 100%"
+  }
+ },
+ {
+  "tool": "ice",
+  "args": [
+   240,
+   120,
+   150
+  ],
+  "expect": {
+   "error": "melt cannot exceed 100%"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   300,
+   4,
+   1,
+   1
+  ],
+  "expect": {
+   "base": 200.0,
+   "syrup": 50.0,
+   "citrus": 50.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   250,
+   3,
+   1,
+   0
+  ],
+  "expect": {
+   "base": 187.5,
+   "syrup": 62.5,
+   "citrus": 0.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   200,
+   5,
+   2,
+   3
+  ],
+  "expect": {
+   "base": 100.0,
+   "syrup": 40.0,
+   "citrus": 60.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   500,
+   8,
+   1,
+   1
+  ],
+  "expect": {
+   "base": 400.0,
+   "syrup": 50.0,
+   "citrus": 50.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   150,
+   2,
+   0,
+   1
+  ],
+  "expect": {
+   "base": 100.0,
+   "syrup": 0.0,
+   "citrus": 50.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   330,
+   7,
+   2,
+   2
+  ],
+  "expect": {
+   "base": 210.0,
+   "syrup": 60.0,
+   "citrus": 60.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   120,
+   1,
+   1,
+   1
+  ],
+  "expect": {
+   "base": 40.0,
+   "syrup": 40.0,
+   "citrus": 40.0
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   275.5,
+   6,
+   1.5,
+   0.5
+  ],
+  "expect": {
+   "base": 206.6,
+   "syrup": 51.7,
+   "citrus": 17.2
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   400,
+   10,
+   3,
+   2
+  ],
+  "expect": {
+   "base": 266.7,
+   "syrup": 80.0,
+   "citrus": 53.3
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   0,
+   4,
+   1,
+   1
+  ],
+  "expect": {
+   "error": "total must be positive"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   -50,
+   4,
+   1,
+   1
+  ],
+  "expect": {
+   "error": "total must be positive"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   300,
+   0,
+   1,
+   1
+  ],
+  "expect": {
+   "error": "parts must be positive (syrup and citrus may be 0)"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   300,
+   -2,
+   1,
+   1
+  ],
+  "expect": {
+   "error": "parts must be positive (syrup and citrus may be 0)"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   300,
+   4,
+   -1,
+   1
+  ],
+  "expect": {
+   "error": "parts must be positive (syrup and citrus may be 0)"
+  }
+ },
+ {
+  "tool": "ratio",
+  "args": [
+   300,
+   4,
+   0,
+   0
+  ],
+  "expect": {
+   "error": "add some syrup or citrus"
+  }
+ }
+]
